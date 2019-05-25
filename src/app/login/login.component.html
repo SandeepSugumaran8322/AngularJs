@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td>
+      Username :
+    </td>
+    <td>
+      <input type="text" id="username" [(ngModel)]="name"/>
+    </td>
+    <td>
+       {{name}}
+    </td>
+
+  </tr>
+  <tr>
+    <td>
+      Password :
+    </td>
+    <td>
+      <input type="text" id="password"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      <button type="button" (click)="navigater()">Submit</button>
+    </td>
+  </tr>
+</table>
