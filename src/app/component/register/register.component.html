@@ -1,0 +1,20 @@
+<div *ngIf="isavailable">
+    Name : <input type='text' id="name" [(ngModel)]="name"/><br>
+    email : <input type='email' id="email" [(ngModel)]="email"/><br>
+    phone:<input type='text' id="phone" minlength="10" maxlength="10" [(ngModel)]="phone"/><br>
+    Course : <select id="course" [(ngModel)]="course">
+      <option value="Java Full satck">Java Full satck</option>
+      <option value="python Full satck">python Full satck</option>
+      <option value="mean/mern Full satck">mean/mern Full satck</option>
+    </select><br>
+    <button type="Submit" (click)="hideAndShow()">Submit</button>
+</div>
+<div *ngIf="!isavailable">
+  Details submitted<br>
+  Name : {{name}}<br>
+  email : {{email}}<br>
+  phone: {{phone}}<br>
+  Course : {{course}}<br>
+
+  Thank you! Our team will contact you soon....
+</div>

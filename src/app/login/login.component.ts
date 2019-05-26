@@ -14,11 +14,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.name="sandeep"
   }
-  navigater()
+  navigater(name:String)
   {
-    this.router.navigate(['/home'])
+    this.router.navigate(['/home/name'])
   }
 
 }
