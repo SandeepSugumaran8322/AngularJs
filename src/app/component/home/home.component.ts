@@ -16,8 +16,13 @@ export class HomeComponent implements OnInit {
   regNavigator() {
     this.route.navigate(['/register'])
   }
+  
   goBack()
   {
     this.route.navigate([''])
+  }
+  eventBinding(val){
+    alert(val);
+
   }
 }

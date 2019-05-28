@@ -1,6 +1,6 @@
 <p style='align-content: right'><button id="logout" (click)="goBack()">logout</button></p>
 <div id="div-parent-container">
-  Hello {{name}}, Welcome
+  Hello, Welcome
   <table>
     <th>
       Courses offered
@@ -21,5 +21,8 @@
       </td>
     </tr>
   </table>
-  <button type="Submit" (click)="regNavigator()">Click to Enquire!</button>
+  Name : <input type="text" id="name" [(ngModel)]="name"/><br>
+  <button [ngClass]="'one two'" type="Submit" (click)="regNavigator()">Click to Enquire!</button>
+  <button ngClass="{{'one two'}}" type="Submit" (click)="eventBinding('Hi')">Click to Enquire!</button>
+  <!-- <app-studentlist [name]="name"></app-studentlist> -->
 </div>

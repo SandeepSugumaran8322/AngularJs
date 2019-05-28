@@ -1,5 +1,6 @@
 <div *ngIf="isavailable">
     Name : <input type='text' id="name" [(ngModel)]="name"/><br>
+    department: <input type='text' id="dept" [(ngModel)]="dept"/><br>
     email : <input type='email' id="email" [(ngModel)]="email"/><br>
     phone:<input type='text' id="phone" minlength="10" maxlength="10" [(ngModel)]="phone"/><br>
     Course : <select id="course" [(ngModel)]="course">
@@ -7,14 +8,9 @@
       <option value="python Full satck">python Full satck</option>
       <option value="mean/mern Full satck">mean/mern Full satck</option>
     </select><br>
-    <button type="Submit" (click)="hideAndShow()">Submit</button>
+    <button type="Submit" (click)="createStudent()">Submit</button>
 </div>
 <div *ngIf="!isavailable">
-  Details submitted<br>
-  Name : {{name}}<br>
-  email : {{email}}<br>
-  phone: {{phone}}<br>
-  Course : {{course}}<br>
-
-  Thank you! Our team will contact you soon....
+  <app-studentlist [student]="student"></app-studentlist>
+  <button type="submit" (click)="hideAndShow()">Enroll for your friends</button>
 </div>

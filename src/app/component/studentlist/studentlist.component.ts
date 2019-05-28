@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Student } from '../register/Student';
 
 @Component({
   selector: 'app-studentlist',
@@ -6,14 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./studentlist.component.less']
 })
 export class StudentlistComponent implements OnInit {
-  student=[{name:"sandeep",age:23,qualification:"BE"},
-          {name:"saran",age:23,qualification:"BE"},
-          {name:"mei",age:20,qualification:"BE"},
-          {name:"roshan",age:22,qualification:"BE"},
-          {name:"dina",age:21,qualification:"BE"}]
-  constructor() { }
-
-  ngOnInit() {
+  @Input() student:Student[]
+  constructor() { 
   }
 
+  ngOnInit() {}
 }

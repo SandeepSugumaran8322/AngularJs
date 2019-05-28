@@ -1,11 +1,15 @@
-<table>
+<table [ngClass]="'stud-table'">
   <tr><td>Name</td>
-    <td>age</td>
-    <td>Qualification</td></tr>
-    
+    <td>department</td>
+    <td>email</td>
+    <td>phone</td>
+    <td>course</td>
+  </tr>  
   <tr *ngFor="let item of student">
     <td>{{item.name}}</td>
-    <td>{{item.age}}</td>
-    <td>{{item.qualification}}</td>
+    <td>{{item.dept}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.phone}}</td>
+    <td>{{item.course}}</td>
   </tr>
 </table>
